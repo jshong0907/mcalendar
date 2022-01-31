@@ -17,13 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from ninja import NinjaAPI
 
-api = NinjaAPI()
+from football.apis import router as football_router
 
+api = NinjaAPI(version='1.0')
 
-@api.get("/add")
-def add(request, a: int, b: int):
-    return {"result": a + b}
-
+api.add_router('/football/', football_router),
 
 urlpatterns = [
     path("admin/", admin.site.urls),
