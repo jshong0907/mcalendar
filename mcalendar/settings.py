@@ -33,6 +33,10 @@ DJANGO_APPS = [
     'football',
 ]
 
+THIRD_PARTY_APPS = [
+    'ninja_extra',
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-] + DJANGO_APPS
+] + DJANGO_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

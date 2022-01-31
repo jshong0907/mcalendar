@@ -17,13 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from ninja import NinjaAPI
 
-from football.apis import router as football_router
-
-api = NinjaAPI(version='1.0')
-
-api.add_router('/football/', football_router),
+from football.apis import api as football_api
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", api.urls),
+    path("api/", football_api.urls),
 ]
