@@ -32,8 +32,14 @@ class Team(models.Model):
         return f'[축구 팀 {self.id}] {self.name}'
 
     @property
-    def description(self):
+    def description(self) -> str:
+        """설명"""
         return str(self)
+
+    @property
+    def league_name(self) -> str:
+        """리그 명"""
+        return self.league.name
 
 
 class League(models.Model):
@@ -56,3 +62,8 @@ class League(models.Model):
 
     def __str__(self):
         return f'[축구 리그 {self.id}] {self.name}'
+
+    @property
+    def description(self) -> str:
+        """설명"""
+        return str(self)
