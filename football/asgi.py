@@ -1,5 +1,5 @@
 """
-ASGI config for mcalendar project.
+ASGI config for football project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mcalendar.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'football.settings')
 
 application = get_asgi_application()
