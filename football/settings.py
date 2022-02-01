@@ -35,7 +35,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 # False if not in os.environ because of casting above
 DEBUG = env('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
